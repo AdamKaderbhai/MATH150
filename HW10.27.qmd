@@ -1,0 +1,67 @@
+---
+title: "HW 10.27"
+author: "Adam Kaderbhai"
+format: pdf
+---
+ 
+# Problem 1
+
+## a.)
+
+```{r}
+heights <- c(160, 165, 170, 185)
+
+mean(heights)
+sd(heights)
+```
+
+## b.)
+
+```{r}
+mean(c(160, 160))
+mean(c(160, 165))
+mean(c(160, 170))
+mean(c(160, 185))
+mean(c(165, 165))
+mean(c(165, 170))
+mean(c(165, 185))
+mean(c(170, 170))
+mean(c(170, 185))
+mean(c(185, 185))
+```
+\newpage
+
+## c.)
+```{r}
+sample_means <- c(160, 162.5, 165, 172.5, 165, 167.5, 175, 170, 177.5, 185)
+
+mean(sample_means)
+sd(sample_means)
+```
+
+## d.)
+```{r}
+sd(heights) / sqrt(2)
+```
+
+# Problem 2
+```{r}
+mu <- 90 # sample mean same as population mean 
+sigma <- 12
+n <- 25
+
+mu
+sigma / sqrt(n)
+
+```
+
+# Problem 3
+```{r}
+mu <- 90 # sample mean same as population mean 
+sigma <- 12
+n <- 100
+
+mu
+sigma / sqrt(n)
+```
+

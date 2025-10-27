@@ -1,0 +1,34 @@
+---
+title: "HW9.26"
+author: "Adam Kaderbhai"
+format: pdf
+---
+
+# Problem 1
+
+A probability experiment consists of flipping a coin and then rolling a standard 6-sided die.
+
+## (a) Identify the sample space
+
+There are two sample spaces here 
+- C -> All the possible outcomes for flipping a coin
+- D -> All the possible outcomes for rolling a die
+
+- C = {H,T}
+- D = {1,2,3,4,5,6}
+
+- |C| = 2
+- |D| = 6
+
+## (b) Write the event, “the coin is a tail and the die roll isn’t a 5” as a set.
+- E_1 = {T}
+- E_2 = {1,2,3,4,6}
+
+## (c) What is the probability of the event in part (b)? Assume all outcomes are equally likely.
+- p(E_1) = 1/2
+- p(E_2) = 5/6
+
+## d) What is the probability that the coin is a head and the die roll is odd?
+
+- p = 1/2
+- p = 3/6

@@ -1,0 +1,93 @@
+---
+title: "HW9.23"
+author: "Adam Kaderbhai"
+format: pdf
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+
+The Z- score formula is 
+$$ Z = \frac{x - \mu}{\sigma} $$ 
+
+
+# Problem 1
+
+A certain kids’ fun run has two age categories: 8-11 and 12-14. Finishing times in the younger group have mean
+33 minutes and standard deviation 4 minutes, while finishing times in the older group have mean 29 minutes and
+standard deviation 5 minutes.
+- (a) Find and interpret the z-score of an 8-11 year old who finishes in 24 minutes.
+- (b) Find and interpret the z-score of a 12-14 year old who finishes in 24 minutes.
+- (c) Which is the more unusual of these two?
+
+
+finishing times 8 - 11 
+$$\mu = 33 $$ 
+$$ \sigma = 4 $$
+finishing times 12 - 14 
+$$\mu = 29 $$ 
+$$ \sigma = 5 $$
+
+
+### a.) 
+
+```{r}
+(24 - 35)/4
+```
+### b.)
+
+```{r}
+(24 - 29)/5
+```
+
+### c.)
+
+Z-Score of 8 - 11 year olds = -2.75
+Z-Score of 12 - 14 year olds = -1.00
+
+The Z-Score of -2.75 is more unusual
+
+# Problem 2
+
+```{r}
+glimpse(faithful)
+```
+
+```{r}
+mean(faithful$eruptions)
+sd(faithful$eruptions)
+```
+```{r}
+(5 - 3.487783)/1.141371
+```
+The Z-Score of 5 minute eruption is 1.324913 mins above the mean
+
+# Problem 3
+
+A music streaming app determines that users’ daily usage is approximately bell shaped with mean 55 minutes and
+standard deviation 14 minutes. Fill in the blanks:
+
+- Approximately 68% of users listen between 41 and 69 mins
+- Approximately 95% of users listen between 27 and 83 mins
+- Approximately 99.7% of users listen between 13 and 97 mins
+
+# Problem 4
+
+Cholesterol levels for women aged 20-34 are normally distributed (bell-shaped) with mean 185 mg/dl. Approximately
+95% of women in this age group have cholesterol between 127 and 243. What is the standard deviation of this
+distribution? 
+
+So the Z-Score of such observation is 2 
+
+- 185 - 2x = 127
+- 185 + 2x = 243
+
+```{r}
+(185 - 127)/2
+(243-185)/2
+```
+The Standard Deviation is 29
+

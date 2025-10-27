@@ -1,0 +1,50 @@
+---
+title: "Midterm2"
+author: "Adam Kaderbhai"
+format: pdf
+embedded-resource: true
+---
+
+## Problem 1
+
+To find the missing probability, we add up all the `P(x)` that are available and subtract the sum by 1. Because if we had all the probabilities they would add up to 1.
+
+```{r}
+1 - (.22 + .18 + .16 + .13)
+```
+The missing `P(x)` is 0.31
+
+
+## Problem 2
+
+```{r}
+x <- c(-2, 5, 7, 8, 12)
+Probabilities <- c(.22, .18, .16, .31, .13)
+
+
+
+Expected_value <- sum(x * Probabilities)
+Expected_value
+```
+
+The expected value is 5.62
+
+## Problem 3
+This is means that if we do the experiment multiple times the average result of `x` in the experiment would be approximately 5.62
+
+
+
+## Problem 4
+```{r}
+variance <- sum((x - Expected_value)^2 * Probabilities)
+variance
+```
+```{r}
+standard_deviation <- sqrt(variance)
+standard_deviation
+```
+Both variance and standard deviation measure the variability (or spread) of random variables
+
+From my computations the `Standard Deviation` of 4.50 suggests that the on average the values are approximately 4.50 units away from the `Mean(Expected Value)` of 5.62. And `Variance` is the `Square` of `Standard Deviation`.
+
+

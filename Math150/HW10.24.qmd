@@ -1,0 +1,53 @@
+---
+title: "HW10.24"
+author: "Adam Kaderbhai"
+format: pdf
+---
+
+---
+title: "HW10.24"
+author: "Adam Kaderbhai"
+format: pdf
+---
+
+# Problem 1
+```{r}
+qnorm(0.44)
+```
+
+# Problem 2
+```{r}
+qnorm(1 - 0.87, 12, 3)
+```
+
+# Problem 3
+
+
+## a)
+
+```{r}
+1 - pnorm(83, 77, 5)
+```
+\newpage
+
+## b) 
+
+```{r}
+qnorm(0.10, 77, 5)
+```
+
+# Problem 4
+
+
+## (a) 
+
+```{r}
+pnorm(1.50, 1.55, 0.06)
+```
+
+## (b) 
+
+```{r}
+qnorm(0.98, 1.55,  0.06)
+```
+
