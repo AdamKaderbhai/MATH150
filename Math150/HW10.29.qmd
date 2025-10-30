@@ -1,0 +1,42 @@
+---
+title: "HW10.29"
+author: "Adam Kaderbhai"
+format: pdf
+---
+
+# Probem 1
+
+## a.)
+```{r}
+1 - pnorm(67, 67.3, 14.2/sqrt(36))
+```
+
+## b.)
+```{r}
+pnorm(66, 67.3, 14.2/sqrt(36))
+```
+
+## c.)
+```{r}
+1 - pnorm(67, 67.3, 14.2/sqrt(36))
+```
+
+\newpage
+
+# Problem 2
+
+## a.)
+```{r}
+1 - pnorm(67, 67.3, 14.2/sqrt(80))
+```
+
+## b.)
+```{r}
+pnorm(66, 67.3, 14.2/sqrt(80))
+```
+
+## c.)
+```{r}
+1 - pnorm(67, 67.3, 14.2/sqrt(80))
+```
+
