@@ -1,0 +1,35 @@
+---
+title: "HW 11.18"
+author: "Adam Kaderbhai"
+format: pdf
+---
+
+
+
+# Problem 1
+A medical school advertises that the mean starting salary of its graduates is $89,000. Concerned that it may actually
+be less, a group of first-years surveys 38 recent graduates, finding a sample mean of $85,500. Assume $σ$= $8000.
+
+
+
+
+## a.)
+- $H_o$ : The mean starting salary of the graduates is $89,000
+- $H_a$ : The mean starting salary of the graduates is less than $89,000
+
+
+## b.)
+```{r}
+(85500 - 89000) / (8000/sqrt(38))
+```
+
+## c.)
+```{r}
+pnorm(85500, 89000,8000/sqrt(38))
+```
+
+## d.)
+since the p-value = 0.0035 is less than $α$ the result is statistically significant.
+
+## e.)
+Based on the survey data, there is strong statistical evidence to suggest that the true mean starting salary for graduates of the medical school is less than the advertised $89,000. The probability of observing a sample mean of $85,500 or lower purely by random chance (if the true mean were $89,000) is very low (only about 0.35%). Therefore, the first-year students' concern appears to be justified.

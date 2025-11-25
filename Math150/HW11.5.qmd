@@ -1,0 +1,86 @@
+---
+title: "HW 11.5"
+author: "Adam Kaderbhai"
+format: pdf
+---
+```{r}
+library(readxl)
+```
+
+- Increasing C increases the margin of error E.
+- Increasing σ increases the margin of error E.
+- Increasing n decreases the margin of error E.
+
+# Problem 1
+
+```{r}
+1.645 * (72.50/sqrt(55))
+```
+
+# Problem 2
+```{r}
+1.645 * (72.50/sqrt(85))
+```
+The one with sample size n = 85 is lower because the population size(n) and Margin of Error(E) are inversely proportional
+
+\newpage
+# Problem 3
+```{r}
+1.960 * (1.04/sqrt(282))
+```
+
+# Problem 4
+```{r}
+1.960 * (1.92/sqrt(282))
+```
+E is higher because σ and E are direcrly proportional
+
+# Problem 5
+```{r}
+mileage <- read_excel("mileage.xlsx")
+mean(mileage$mpg)
+
+1.960 * (3.5/sqrt(45))
+```
+
+# Problem 6
+```{r}
+2.576 * (3.5/sqrt(45))
+```
+ E is higher because `C` and `E` are directly proportional
+ 
+# Problem 7
+
+```{r}
+((1.960 * 25)/15)^2
+```
+n = 11
+
+# Problem 8
+```{r}
+((1.960 * 25)/5)^2
+```
+n = 97
+
+# Problem 9
+Sample size always increases with larger σ. If σ increases, the required sample size increases in both problems to maintain the same confidence and margin of error.
+
+# Problem 10
+SIMILARITIES:
+
+- Both are symmetric (bell-shaped curves)
+
+- As the degrees of freedom increase (or as the sample size n grows large), the t-distribution approaches the standard normal distribution (z-distribution).
+
+- Both are used for calculating confidence intervals.
+
+DIFFERENCES:
+
+- The t-distribution is more spread out than the standard normal.
+
+- The shape of the t-distribution changes with degrees of freedom, while the standard normal is fixed.
+
+- Use the  (z-distribution) when σ is known and n is large while.
+
+- Use the t-distribution when σ is unknown or when n is small.
+

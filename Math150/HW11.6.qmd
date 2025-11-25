@@ -1,0 +1,35 @@
+---
+title: "HW 11.6"
+author: "Adam Kaderbhai"
+format: pdf
+---
+
+# Problem 1
+Compute P(T <−1.1) in t(22).
+
+```{r}
+pt(-1.1, 22)
+```
+
+# Problem 2
+Compute P(−1.5 <T <.4) in t(5).
+```{r}
+pt(0.4, 5) - pt(-1.5, 5)
+```
+
+# Problem 3
+Find the number τ such that P(T > $\tau$) =.05 in t(80). Note that this a right-tailed probability, not a left-tailed
+one.
+```{r}
+qt(1-0.05, 80)
+```
+\newpage
+
+# Problem 4
+Find the number τ such that 95% of the area under t(6) lies between −$\tau$ and $\tau$.
+```{r}
+qt((1-0.95)/2, 6)
+qt(0.025, 6)
+qt(0.975, 6)
+```
+

@@ -1,0 +1,97 @@
+---
+title: "Midterm Exam Review"
+author: "Adam Kaderbhai"
+format: pdf
+---
+
+# 1.)
+Compute the following in $N(2.0, 0.3^2)$, the normal distribution with mean 2.0
+and standard deviation 0.3.
+(a) P(X < 2.5)
+(b) P(X > 2.1)
+(c) P(1.6 ≤ X ≤ 2.0)
+(d) Find the value c so that P(X ≤ c) = .25
+```{r}
+pnorm(2.5, 2.0, 0.3)
+1 - pnorm(2.1, 2.0, 0.3)
+pnorm(2.0, 2.0, 0.3) - pnorm(1.6, 2.0, 0.3)
+qnorm(.25, 2.0, .3)
+```
+
+# 2.) 
+In a survey, 1600 adults were asked how many cups of coffee they drink per 
+day. The results are given below.
+
+Cups per day  0     1     2     3     4     5
+Frequency     570   432   299   152   112   35
+
+If a random person is selected from the group, the expected value is µX =
+1.32 and the standard deviation is σX = 1.34, as we computed earlier in the
+semester.
+(a) Describe the distribution of X, the random variable obtained by taking the
+mean of a sample of size n = 25 from this distribution.
+```{r}
+1.34/sqrt(25)
+```
+
+
+(b) What is the probability that X is at least 1.5?
+```{r}
+pnorm(1.5, 1.32, 1.34 )
+```
+
+(c) What is the probability that X is between 1 and 2?
+```{r}
+pnorm(2, 1.32, 1.34) - pnorm(1, 1.32, 1.34)
+```
+3. The Union Shield Penny (one of two pennies currently minted in the U.S.) has
+a mean weight of 3.11 grams with a standard deviation of .03g. These weights
+are normally distributed.
+
+(a) What is the probability that a randomly selected penny has weight less
+than 3.15g?
+
+(b) What is the probability that a randomly selected penny has weight greater
+than 3.12g?
+
+(c) What is the probability that a randomly selected penny has weight between
+3.10 and 3.13g?
+
+(d) A certain penny weighs less than 60% of pennes. What is its weight?
+
+(e) What is the z-score of such a penny? Interpret this number is words.
+
+(f) What is the probability that 10 randomly selected pennies have average
+weight greater than 3.13g?
+
+(g) What is the probability that a roll of 50 pennies weighs more than 155.2g?
+```{r}
+pnorm(3.15, 3.11, .03)
+
+1 - pnorm(3.12, 3.11, .03)
+
+pnorm(3.13, 3.11, .03) - pnorm(3.10, 3.11, .03)
+
+qnorm(.60, 3.11, .03)
+
+Z_Score = (qnorm(.60, 3.11, .03) - 3.11) / .03
+
+1 - pnorm(3.13, 3.11, .03/sqrt(10))
+
+
+```
+Problem 6
+
+```{r}
+library(readxl)
+freshman_15 <- read_excel("freshman_15.xlsx")
+View(freshman_15)
+```
+
+```{r}
+mean(freshman_15$WT_SEPT)
+
+```
+
+
+

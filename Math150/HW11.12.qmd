@@ -1,0 +1,62 @@
+---
+title: "HW11.12"
+author: "Adam Kaderbhai"
+format: pdf
+---
+
+# Problem 1
+```{r}
+my_vector <- c(24, 17, 26, 33, 21, 38, 24, 13, 41, 17, 
+               15, 19, 12, 29, 19, 24, 31, 15)
+
+sample_mean <- mean(my_vector)
+sample_sd <- sd(my_vector)
+
+conf_level <- qt(0.995, 17)
+
+conf_level*(sample_mean/sqrt(18))
+
+mu <- conf_level*(sample_mean/sqrt(18))
+
+sample_mean - mu
+sample_mean + mu
+
+
+```
+
+\newpage 
+
+# Problem 2
+```{r}
+mean_hp <- mean(mtcars$hp)
+sd_hp <- 1.2
+
+Conflvl_hp <- qt(0.975, 31)
+
+Conflvl_hp * (sd_hp/sqrt(32))
+mu = Conflvl_hp * (sd_hp/sqrt(32))
+
+mean_hp
+mean_hp - mu
+mean_hp + mu
+
+```
+
+# Problem 3
+In a random sample of 32 chocolate bars, the mean calorie count is 204.0 and the standard deviation is 12.8.
+Compute a level 95% confidence interval for the population mean.
+```{r}
+conf_level <- qt(0.975, 31)
+
+mean_chocbar <- 204
+sd_chocbar <- 12.8
+
+conf_level * (sd_chocbar/sqrt(32))
+mu = conf_level * (sd_chocbar/sqrt(32))
+
+mean_chocbar
+mean_chocbar + mu
+mean_chocbar - mu
+
+```
+

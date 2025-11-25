@@ -1,0 +1,57 @@
+---
+title: "HW 10.31"
+author: "Adam Kaderbhai"
+format: pdf
+---
+
+# Problem 1
+
+## a.)
+```{r}
+1 - pnorm(.650, 0.620, .165)
+```
+
+## b.)
+```{r}
+1 - pnorm(0.650, 0.620, 0.165 / sqrt(10))
+```
+
+## c.)
+```{r}
+1 - pnorm(0.650, 0.620, 0.165 / sqrt(50))
+```
+\newpage
+## d.)
+```{r}
+1 - pnorm(0.650, 0.620, 0.165 / sqrt(500))
+```
+
+# Problem 2
+
+## a.)
+
+### i.)
+```{r}
+1 - pnorm(3.20, 3.49, 1.14)
+```
+
+### ii.)
+```{r}
+1 - pnorm(3.20, 3.49, 1.14/sqrt(20))
+```
+
+
+## b.)
+
+
+## Notes From the YT Video
+
+- `µ` is the mean of the population 
+- `x` is the mean of the sample
+- `z∗` is the Z score of the desired Confidence Interval usually 0.90, 0.95 and 0.99
+- `σ` is the Standard deviation of the sample
+- `n` is the sample size
+
+
+
+

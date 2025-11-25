@@ -1,0 +1,47 @@
+---
+title: "HW11.10"
+author: "Adam Kaderbhai"
+format: pdf
+---
+
+
+# Problem 1
+In a simple random sample of 10 sales clerks at convenience stores in 1989, the mean salary was $25,352.87 and
+the standard deviation was $3,202.09. Compute a level 95% confidence interval for the population mean. Carefully
+justify your answer.
+
+```{r}
+Conf_lvl <- qt(0.975, 9)
+
+Conf_lvl*(3202.09/sqrt(10))
+
+```
+The t-distribution is used because the population standard deviation is unknown and must be estimated from the sample. This method is appropriate for the small sample size (n=10) as it accounts for the additional uncertainty that comes from using a sample to estimate the population parameters. This requires the assumption that the underlying population of salaries is approximately normally distributed.
+
+\newpage
+
+# Problem 2
+Using the R data set mtcars, construct a level 90% confidence interval for the mean horsepower of all cars (a) by
+direct computation and (b) using the t.test function. Confirm that your answers agree with one another.
+
+## a.)
+```{r}
+mean_hp <- mean(mtcars$hp)
+sd_hp <- sd(mtcars$hp)
+
+Conflvl_hp <- qt(0.95, 31)
+
+mu = Conflvl_hp * (sd_hp/sqrt(32))
+
+mean_hp - mu
+mean_hp + mu
+
+```
+
+## b.)
+```{r}
+t.test(mtcars$hp, conf.level = .90)
+```
+
+## c.)
+Both results yield the exact same intervals

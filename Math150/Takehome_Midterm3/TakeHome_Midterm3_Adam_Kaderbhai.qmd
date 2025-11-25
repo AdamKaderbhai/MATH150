@@ -1,0 +1,71 @@
+---
+title: "Take Home Midterm 3"
+author: "Adam Kaderbhai"
+format: pdf
+---
+
+```{r}
+#| echo: false
+library(readxl)
+optical <- read_excel("optical.xlsx")
+```
+
+# Problem 6
+
+This problem refers to the optical data set, available on Moodle. This set represents a random
+sample of 43 patients at an optometry clinic. In this problem, we are interested in the eye difference
+variable. Positive values indicate greater weakness in the left eye.
+
+## (a) 
+Construct a level 90% confidence interval for eye difference in the population from which this
+sample was drawn using direct calculation. Identify the point estimate, margin of error, and
+interval endpoints. Make sure your work is clear.
+
+```{r}
+point_estimate <- mean(optical$eye_difference)
+point_estimate
+
+standard_dev <- sd(optical$eye_difference)
+
+n <- 43
+
+C_level <- qt(.95, df = 42)
+
+Margin_of_Error <- C_level * (standard_dev/sqrt(n))
+Margin_of_Error
+
+point_estimate - Margin_of_Error
+point_estimate + Margin_of_Error
+```
+
+- The point estimate is the sample mean which is equal to -0.38
+- The Margin of Error is 0.43
+- interval end point (-0.81, 0.04)
+
+
+## (b) 
+Confirm the results of part (a) with a single line of R code. Include both code and output.
+
+```{r}
+t.test(optical$eye_difference, conf.level = 0.90)
+```
+\newpage
+
+## (c) 
+Write a sentence or two interpreting your result using the language from class. Your answer
+should say something about which eye, if either, tends to require greater correction.
+
+
+
+- With 90% Confidence Interval the mean eye difference for the population is between -0.81 to 0.04.
+
+- In this sample the right eye tends to require more correction in the sample (sample mean = −0.38).
+
+- If the population mean were 0 which is in the range (-0.81, 0.04), then there would be ambiguity about which eye needs more correction.
+
+
+
+
+
+
+
