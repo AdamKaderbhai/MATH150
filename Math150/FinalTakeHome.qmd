@@ -1,0 +1,55 @@
+# Problem 1 /
+
+TAKEHOME. Submit at the start of the final exam at 8:30 am on Monday, December 8. Use R
+for all quantitative calculations, including code and output in all cases. Follow all standards and
+best-practices used throughout the semester.
+
+This problem refers to theonionsdata set, available on Moodle. This set includes information
+about mean yield per pound and planting densities of three varieties of onions.
+
+```
+(a) Is theVarieyvariable quantitative or qualitative? What is the level of measurement? Briefly
+explain your answers.
+```
+```
+(b)Compute the five-number summary and inter-quartile range of planting densities for onions in
+this set.
+```
+```
+(c) Determine the 60thpercentile of onion yields in this set.
+```
+```
+(d)Compute a level 95% confidence interval for the mean yieldwithoutusing thet.testfunction.
+Briefly explain your choice of method (torz). Identify the point estimate, margin or error, and
+endpoints of the interval.
+```
+
+# Problem 2 /
+
+Use R for all quantitative calculations. Include code and output in all cases.
+
+This problem refers to thecheesesampledata set, available on Moodle. This set gives lactic acid
+concentrations (units unknown) and taste ratings for 7 cheeses.
+
+```
+Lactic acid 0.86 1.29 1.30 1.31 1.44 1.53 1.
+Taste 12.3 37.3 25.9 16.8 32.0 20.9 47.
+```
+```
+(a) In just a sentence or two, explain the circumstances under which it would be appropriate to
+calculate the correlation coecient of these two variables. No R code is needed for this part.
+```
+```
+(b)Assume the conditions in part (b) are met and determine the correlation of these two variables.
+```
+```
+(c) Find the equation of the least-squares regression line. UseLacticas the explanatory variable.
+```
+
+(d)What is the predicted taste rating of a cheese with a lactic acid concentration of 2.27? If this
+calculation isn’t appropriate, briefly explain why.
+
+```
+(e) What is the residual of the cheese with lactic acid concentration of 1.31? Briefly interpret this
+number in ordinary human language.
+```

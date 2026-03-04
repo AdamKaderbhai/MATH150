@@ -1,0 +1,112 @@
+---
+title: "Final Take Home Exam"
+author: "Adam Kaderbhai"
+format: pdf
+---
+```{r}
+#| echo: false
+library(readxl)
+
+onions <- read_excel("onions.xlsx")
+cheese_sample <- read_excel("cheese_sample.xlsx")
+```
+
+# Problem 1
+ 
+## a.)
+
+`Variety` is a categorical variable since it does not involve numerical measurements
+And it has a Nominal level of measurement since it does not have a specific order to it
+
+## b.)
+
+```{r}
+quantile(onions$Dens)
+
+min <- 2.14
+Q_1 <- 4.6475
+Median <- 8.6950
+Q_3 <- 18.4825
+max <- 31.0800
+
+
+IQR <- Q_3 - Q_1
+IQR
+```
+- min = 2.14
+- $Q_1$ = 4.6475
+- Median = 8.6950
+- $Q_3$ = 18.4825
+- max = 31.08
+- IQR = 13.835
+
+## c.)
+
+```{r}
+quantile(onions$Yield, .60)
+```
+
+60% of the onion yields are less than or equal to 52.92 units.
+
+## d.)
+```{r}
+point_estimate <- mean(onions$Yield)
+point_estimate
+
+standard_dev <- sd(onions$Yield)
+
+n <- 30
+
+C_level <- qt(.975, df = 29)
+
+Margin_of_Error <- C_level * (standard_dev/sqrt(n))
+Margin_of_Error
+
+point_estimate - Margin_of_Error
+point_estimate + Margin_of_Error
+```
+This is a t-distribution since the population standard deviation is unknown. The point estimate which is also the sample mean is 54.71. The Margin of error is 12.4335. And the endpoints are  42.2765 and 67.1435
+
+# Problem 2
+
+## a.)
+
+In order to find the coefficient of correlation, the variables need to be quantitative and need to have a linear relationship. Variables that have a linear relationship but zero correlation look like random clouds.
+
+## b.)
+```{r}
+cor(cheese_sample$Lactic, cheese_sample$Taste)
+```
+This shows a positive moderate correlation between the variables `Lactic` and `Taste`.
+
+## c.)
+
+```{r}
+lm(cheese_sample$Taste ~ cheese_sample$Lactic)
+```
+
+$cheese\_sample\$Taste = -2.644 + 15.921cheese\_sample\$Lactic$
+
+For every 1 unit increase of Lactic , we expect the taste to increase by approximately
+15.92 units, on average.
+
+## d.)
+
+This calculation is appropriate because the lactic acid concentration of `1.30` falls within the range of all lactic acid concentrations
+```{r}
+Taste_predicted = -2.644 + (15.921 * 1.30)
+Taste_predicted
+```
+The predicted taste rating for the cheese with lactic acid concentration of 1.30 is 18.0533
+
+## e.)
+
+```{r}
+Taste_actual <- 25.9
+Taste_predicted <- 18.0533
+
+Residual = Taste_actual - Taste_predicted
+
+Residual
+```
+The cheese with lactic acid concentration of 1.30 has a taste rating of 7.8467 units greater then what we would expect for the cheese with that lactic acid concentration.
